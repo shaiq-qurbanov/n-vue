@@ -2,30 +2,75 @@
         <div class="zona-1"
              @drop="onDrop"
              @dragover.prevent
-             @dragenter.prevent
-        ></div>
-        <div class="zona-2">
-            <p class="ufo" id="ufo" draggable="true" @dragstart="sratDrag">hello</p>
+             @dragenter.prevent>
+<!--            <p class="ufo"-->
+<!--               draggable="true"-->
+<!--               @dragstart="startDrag">-->
+<!--                hello-->
+<!--            </p>-->
+        </div>
+        <div class="zona-2"
+            @drop="onDrop"
+            @dragover.prevent
+            @dragenter.prevent>
+            <p class="ufo"
+               id="ufo"
+               draggable="true"
+               @dragstart="startDrag">
+                World
+            </p>
 
         </div>
-    <diV class="zona-2">
-        <p class="ufo" id="block" draggable="true" @dragstart="sratDrag">world</p>
-    </diV>
+    <div class="items" v-for="item in items">
+        {{item}}
 
+    </div>
 </template>
 
 <script>
+    // import { Container, Draggable } from "vue-dndrop";
 export default {
 name: "drag.vue",
-    Data(){
+    data(){
     return{
         zona1:'',
         zona2:'',
-        ufo:''
+        ufo:'',
+        items: [
+            {
+                id: 0,
+                title: 'Item A',
+                list: 1,
+                solary:300
+            },
+            {
+                id: 3,
+                title: 'Item d',
+                list: 3,
+                solary:450
+            },
+            {
+                id: 1,
+                title: 'Item B',
+                list: 1,
+                solary:600
+            },
+            {
+                id: 2,
+                title: 'Item C',
+                list: 2,
+                solary:870
+            },
+        ]
+
     }
+    },
+    computed:{
+
     },
     mounted() {
     // this.DragAndDrop()
+    //     this.fun()
     },
     methods:{
     //     DragAndDrop(event){
@@ -51,23 +96,36 @@ name: "drag.vue",
     //                 event.target.append(document.getElementById(itemId))
     //             }
     // },
-    sratDrag(event){
+    startDrag(event){
             event.dataTransfer.dropEffect='move';
             event.dataTransfer.effectAllowed='move';
             event.dataTransfer.setData('id',event.target.id)
     },
         onDrop(event){
             let itemId = event.dataTransfer.getData('id');
-            event.target.append(document.getElementById(itemId))
+            event.target.append(document.getElementById(itemId));
+            console.log(this.fun(3,4,5,6,8))
 
+        },
+        fun(a,b,...arr){
+        console.log(a,b)
+            console.log([...arr])
+            console.log('arr:',arr)
+            console.log(a+b)
+            console.log('arguments',arguments)
         }
-
 
     }
 }
 </script>
 
 <style scoped>
+    .items{
+        width: 300px;
+        padding: 10px;
+        background-color: darkolivegreen;
+        margin: 50px;
+    }
 .zona-1{
     width: 200px;
     height: 60px;

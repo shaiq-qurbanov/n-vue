@@ -10,14 +10,18 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@babel/core": "^7.20.2",
+        "@babel/preset-env": "^7.20.2",
         "axios": "^0.27",
+        "babel-loader": "^9.1.0",
         "laravel-mix": "^6.0.49",
         "laravel-vite-plugin": "^0.6.0",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^3.0.0",
         "vue-loader": "^17.0.0",
-        "vue-router": "^4.1.5"
+        "vue-router": "^4.1.5",
+        "webpack": "^5.74.0"
     },
     "dependencies": {
         "vue": "^3.2.36",

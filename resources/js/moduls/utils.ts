@@ -23,3 +23,10 @@ export const generateItems = (count, creator) => {
     }
     return result;
 };
+export const createArray=(count, creator)=> {
+    const res = [];
+    for (let k = 0; k < count; k++) {
+        res.push(creator(k))
+    }
+    return res
+};

@@ -42,6 +42,11 @@ export default {
                     list: 1,
                 },
                 {
+                    id: 3,
+                    title: 'Item D',
+                    list: 1,
+                },
+                {
                     id: 2,
                     title: 'Item C',
                     list: 2,
@@ -82,7 +87,7 @@ export default {
     padding: 10px;
 }
 .drag-el {
-    background-color: #b57f7f;
+    background-color: #3b36a1;
     margin-bottom: 10px;
     padding: 10px;
 }
