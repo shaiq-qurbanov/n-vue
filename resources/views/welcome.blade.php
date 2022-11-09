@@ -3,10 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content='true' name='HandheldFriendly'/>
-        <meta content='width' name='MobileOptimized'/>
-        <meta content='yes' name='apple-mobile-web-app-capable'/>
-
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -20,6 +16,12 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background-color: lightblue;
+            }
+            @media only screen and (max-width: 600px){
+                body{
+                    background-color: yellow;
+                }
             }
         </style>
     </head>

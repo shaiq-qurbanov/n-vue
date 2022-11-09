@@ -1,5 +1,5 @@
 <template>
-    <div>
+<!--    <div>-->
         <div class="simple-page">
             <Container @drop="onDrop">
                 <Draggable v-for="item in items" :key="item.id">
@@ -9,16 +9,16 @@
                 </Draggable>
             </Container>
         </div>
-<p v-for="item in items" :key="item.id">{{item.id}}........{{item.data}}</p>
-        <container @drop="onDrop">
-            <Draggable v-for="arrX in arrayX" :key="arrX.id">
-                <div class="draggable-item">
-                    {{arrX.data}}
-                </div>
-            </Draggable>
-        </container>
-    </div>
-    <div class="comp" id="comp"></div>
+<!--<p v-for="item in items" :key="item.id">{{item.id}}........{{item.data}}</p>-->
+<!--        <container @drop="onDrop">-->
+<!--            <Draggable v-for="arrX in arrayX" :key="arrX.id">-->
+<!--                <div class="draggable-item">-->
+<!--                    {{arrX.data}}-->
+<!--                </div>-->
+<!--            </Draggable>-->
+<!--        </container>-->
+<!--    </div>-->
+<!--    <div class="comp" id="comp"></div>-->
 
 </template>
 

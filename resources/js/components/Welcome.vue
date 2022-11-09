@@ -25,22 +25,37 @@ export default {
 }
 </script>
 <style scoped>
+    *{
+        box-sizing: border-box;
+    }
+
+    a:hover{
+        background-color: #4f89a4;
+    }
     .nav{
+        border-top: 4px solid #931818 ;
         width: 100%;
         height: 50px;
         display: flex;
         justify-content: space-between;
-        background-color:#ed4c00  ;
+        background-color: #ed4c00;
+
     }
     .test{
         text-align: center;
         padding: 12px;
         width: 18%;
-        height: 50px;
+        height: 46px;
         background-color: #f1700d;
         color: #f3ffdd;
         border-radius: 16px;
     }
+/*    @media screen and (max-width: 600px){*/
+/*   .nav{*/
+/*       width: 20%;*/
+/*       flex-direction: column;*/
+/*}*/
+/*    }*/
     .show{
         background-color: #4f89a4;
 
